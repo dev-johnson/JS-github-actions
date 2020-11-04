@@ -1,0 +1,27 @@
+{
+  "name": "js-github-actions",
+  "version": "1.0.0",
+  "description": "A simple JS application to test CI-CD using github actions",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-johnson/js-github-actions.git"
+  },
+  "keywords": [
+    "Javascript",
+    "CI",
+    "CD"
+  ],
+  "author": "Johnson T",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dev-johnson/js-github-actions/issues"
+  },
+  "homepage": "https://github.com/dev-johnson/js-github-actions#readme",
+  "dependencies": {
+    "jest": "^26.6.3"
+  }
+}
