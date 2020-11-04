@@ -6,12 +6,12 @@ name: Master CD
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [ master, develop ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  Production_Deployment:
+  Production_Testing:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -30,5 +30,9 @@ jobs:
       - name: Run test cases
         run: npm run test
 
-      - name: 'Deploy to server'
-        run: echo code Deploy to server!
+  Production_deployment:
+      runs-on: ubuntu-latest
+      needs: Production_Testing
+      steps:
+        - name: 'Deploy to server'
+          run: echo code Deploy to server!
